@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Crypt</title>
+  </head>
+  <body>
+
+    <div class="row my-5">
+      <div class="col-md-4 offset-md-4">
+        <div class="card">
+          <div class="card-body">
+            <form class="" action="/encrypt" method="post">
+              <div class="form-group">
+                <input class="form-control" type="text" name="text" value="" placeholder="Enter any text">
+              </div>
+              <div class="form-group">
+                <button class="btn form-control btn-primary">Encrypt</button>
+              </div>
+            </form>
+              <% if(encrypted){ %>
+                  <h6><%= encrypted %></h6>
+                <% } %>
+            <form class="" action="/decrypt" method="post">
+              <div class="form-group">
+                <input class="form-control" type="text" name="dtext" value="" placeholder="Enter any text">
+              </div>
+              <div class="form-group">
+                <button class="btn form-control btn-primary">Decrypt</button>
+              </div>
+            </form>
+            <% if(decrypted){ %>
+              <h6><%= decrypted %></h6>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
